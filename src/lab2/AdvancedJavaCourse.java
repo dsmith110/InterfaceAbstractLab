@@ -5,10 +5,10 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Dan Smith
  * @version     1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse implements Course {
     private String courseName;
     private String courseNumber;
     private double credits;
