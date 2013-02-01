@@ -19,9 +19,9 @@ public abstract class Course {
      * Two simple constructors
      */
     public Course(String courseName, String courseNumber, double credits) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
-        this.credits = credits;
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public Course() {

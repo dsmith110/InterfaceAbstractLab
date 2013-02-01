@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Dan Smith
  * @version     1.00
  */
 public class IntroToProgrammingCourse implements Course {
@@ -14,9 +14,20 @@ public class IntroToProgrammingCourse implements Course {
     private double credits;
     private String prerequisites;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber, 
+            double credits, String prerequisites) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
+        this.prerequisites = "N/A";
+    }
+
+    public IntroToProgrammingCourse(String courseName, String courseNumber, 
+            double credits) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
+        this.prerequisites = "N/A";
     }
 
     public String getCourseNumber() {
@@ -48,6 +59,10 @@ public class IntroToProgrammingCourse implements Course {
     public String getCourseName() {
         return courseName;
     }
+    
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
 
     public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
@@ -59,10 +74,18 @@ public class IntroToProgrammingCourse implements Course {
     }
 
     public void setPrerequisites(String prerequisites) {
-        
+        this.prerequisites = "N/A"; 
     }
+    
     public String getPrerequisites() {
         return prerequisites;
     }
     
+    @Override
+    public String toString() {
+        return "To enroll in " + getCapitalizedCourseName() 
+                + ".\nYou must have obtained a C or better in the "
+                + "following courses\n-------------------------------\n" 
+                + prerequisites;
+    }
 }

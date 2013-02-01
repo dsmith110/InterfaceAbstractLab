@@ -14,13 +14,19 @@ public class AdvancedJavaCourse implements Course {
     private double credits;
     private String prerequisites;
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
+    public AdvancedJavaCourse(String courseName, String courseNumber, 
+            double credits) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public String getCourseNumber() {
         return courseNumber;
+    }
+    
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
     }
 
     public final void setCourseNumber(String courseNumber) {
@@ -71,5 +77,11 @@ public class AdvancedJavaCourse implements Course {
         this.courseName = courseName;
     }
 
-    
+    @Override
+    public String toString() {
+        return "To enroll in " + getCapitalizedCourseName() 
+                + ".\nYou must have obtained a C or better in the "
+                + "following courses\n-------------------------------\n" 
+                + this.getPrerequisites();
+    }
 }

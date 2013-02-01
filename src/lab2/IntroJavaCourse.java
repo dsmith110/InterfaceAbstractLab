@@ -12,9 +12,11 @@ public class IntroJavaCourse implements Course {
     private double credits;
     private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        this.courseName = courseName;
-        this.courseNumber = courseNumber;
+    public IntroJavaCourse(String courseName, String courseNumber, 
+            double credits) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
 
     public String getCourseNumber() {
@@ -42,11 +44,22 @@ public class IntroJavaCourse implements Course {
     }
 
     public void setCourseName(String courseName) {
-        
+        this.courseName = courseName;
     }
     
     public String getCourseName() {
         return courseName;
     }
     
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
+    
+    @Override
+    public String toString() {
+        return "To enroll in " + this.getCapitalizedCourseName() 
+                + ".\nYou must have obtained a C or better in the "
+                + "following courses\n-------------------------------\n" 
+                + prerequisites;
+    }
 }
