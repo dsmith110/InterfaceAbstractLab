@@ -1,7 +1,8 @@
 package lab2;
 
 /**
- * Describe responsibilities here.
+ * A lot of re-written code that could be inherited as concrete methods from
+ * an abstract super class.
  *
  * @author      your name goes here
  * @version     1.00

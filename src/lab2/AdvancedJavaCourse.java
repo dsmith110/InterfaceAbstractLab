@@ -3,7 +3,9 @@ package lab2;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * Not the best use of an interface in my opinion.
+ * Repeated code has to be written for all implementations when you could 
+ * just inherit concrete getters and setters that you know won't change.
  *
  * @author      Dan Smith
  * @version     1.00

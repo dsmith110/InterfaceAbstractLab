@@ -3,7 +3,7 @@ package lab1;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * Inheriting abstract super class.
  *
  * @author      Dan Smith
  * @version     1.00

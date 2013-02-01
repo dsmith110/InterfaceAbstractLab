@@ -3,7 +3,9 @@ package lab1;
 //import javax.swing.JOptionPane; <---- Not needed
 
 /**
- * Describe responsibilities here. NOTE: this class has NO PREREQUISITES!
+ * Abstract classes get to utilize code re-use. In this application
+ * I think it's ideal.
+ * NOTE: this class has NO PREREQUISITES!
  * Do not change this fact.
  *
  * @author      Dan Smith
@@ -16,10 +18,12 @@ public class IntroToProgrammingCourse extends Course {
      * Constructor -
      * More can be made depending on requirements
      */
-    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber, 
+            double credits) {
         super(courseName, courseNumber, credits);
-        // Just in case someone doesn't call setPrerequisites
-        prerequisites = "N/A";
+        // Did this to ensure setPrerequisites is always called when object
+        // is instantiated
+        this.setPrerequisites(prerequisites);
     }
 
     /*

@@ -3,7 +3,7 @@ package lab2;
 import javax.swing.JOptionPane;
 
 /**
- * Describe responsibilities here.
+ * So much more code to write with interfaces.
  *
  * @author      Dan Smith
  * @version     1.00
@@ -19,7 +19,7 @@ public class IntroToProgrammingCourse implements Course {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
         this.setCredits(credits);
-        this.prerequisites = "N/A";
+        this.setPrerequisites(prerequisites);
     }
 
     public IntroToProgrammingCourse(String courseName, String courseNumber, 
@@ -27,7 +27,7 @@ public class IntroToProgrammingCourse implements Course {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
         this.setCredits(credits);
-        this.prerequisites = "N/A";
+        this.setPrerequisites(prerequisites);
     }
 
     public String getCourseNumber() {
