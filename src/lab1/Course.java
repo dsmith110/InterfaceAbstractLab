@@ -34,6 +34,10 @@ public abstract class Course {
     public String getCourseName() {
         return courseName;
     }
+    
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }
 
     /**
      * @param courseName the courseName to set

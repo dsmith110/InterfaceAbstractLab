@@ -21,7 +21,7 @@ public class Startup {
         // Set Prerequisites
         course1.setPrerequisites("Intro to Programming, Intro to Java");
         course2.setPrerequisites("Intro to Programming");
-        
+
         System.out.println(course1);
         System.out.println("");
         System.out.println(course2);

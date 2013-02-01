@@ -35,8 +35,9 @@ public class IntroToProgrammingCourse extends Course {
     
     @Override
     public String toString() {
-        return "To enroll in " + super.getCourseName() + ".\nYou must have "
-                + "obtained a C or better in the following courses "
-                + "\n-------------------------------\n" + prerequisites;
+        return "To enroll in " + super.getCapitalizedCourseName() 
+                + ".\nYou must have "+ "obtained a C or better in the "
+                + "following courses\n-------------------------------\n" 
+                + prerequisites;
     }
 }
