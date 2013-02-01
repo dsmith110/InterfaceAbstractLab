@@ -18,6 +18,7 @@ public class PlayerCharacter extends Character implements Human, Warrior {
     private int intimidationPts;
     
     // Properties needed for Warrior interface
+    private int rage;
     private int strength;
     private int stamina;
     private String skills;
@@ -50,12 +51,25 @@ public class PlayerCharacter extends Character implements Human, Warrior {
     }
     
     // Methods from Warrior interface
+    public void setRage(int rage) {
+        
+    }
+    
     public void setStrength(int strength) {
         // Warrior gets strength bonus
         this.strength = strength + 5;
     }
+    
     public void setWarriorSkills(String skills) {
         // Method will set skills to skills array
+    }
+    
+    public void setStamina(int stamina) {
+        this.stamina = stamina;
+    }
+    
+    public int getRage() {
+        return rage;
     }
     
     public int getStrength() {
@@ -64,10 +78,6 @@ public class PlayerCharacter extends Character implements Human, Warrior {
     
     public String getWarriorSkills() {
         return skills;
-    }
-    
-    public void setStamina(int stamina) {
-        this.stamina = stamina;
     }
     
     public int getStamina() {
