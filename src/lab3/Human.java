@@ -5,15 +5,17 @@
 package lab3;
 
 /**
- *
+ * I made this an interface because enemies and characters in the game could
+ * be human. I envision that every human would have an algorithm that modifies
+ * the interaction with other characters based on these.
+ * -----------------------------------------------------------
  * @author  Dan Smith
  * @version 1.00
  */
 public interface Human {
     /*
-     * Methods I thought a main character that is a human would
-     * have in a game. Intellect is intelligence not for magic.
-     * I should refactor it.
+     * Intellect is intelligence, not for magic.
+     * I should refactor it to clear up confusion.
      */
     public abstract void setIntellectPts(int intellectPts);
     public abstract void setIntimidationPts(int intimidationPts);

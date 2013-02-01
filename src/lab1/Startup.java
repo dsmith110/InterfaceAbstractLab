@@ -6,7 +6,19 @@ package lab1;
 
 /**
  *
- * @author Dan Smith
+ * I think this architecture for this program is pretty
+ * good. After some thought I should have named the super
+ * class ProgrammingCourse and had that inherit Course, 
+ * because the sub-classes in this program are a very
+ * specific type of course, likewise ProgrammingCourse would be a 
+ * more specific type of Course. Also the program has versatility
+ * with this architecture and allows the author of main to
+ * use Liskov's substitution method when instantiating objects,
+ * This can be used because all the sub classes of Course (in
+ * this case) are interchangeable.
+ * -----------------------------------------------------
+ * @author  Dan Smith
+ * @version 1.00
  */
 public class Startup {
     

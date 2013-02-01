@@ -5,7 +5,13 @@
 package lab3;
 
 /**
- *
+ * This is the main super class I came up with. It's abstract because
+ * character is a generic type of object in the game. The properties such as 
+ * name, health, exp, and isMale(wasn't sure where to put this) can apply to 
+ * all characters (main character, enemies, bosses, NPCs). 
+ * The abstract method implementation for weapon and skill points will be 
+ * different for every character when instantiating the character.
+ * 
  * @author  Dan Smith
  * @version 1.00
  */
@@ -14,8 +20,9 @@ public abstract class Character {
     private int health;
     private int exp;
     private boolean isMale;
-    private int skillPts;
     // Inventory array
+    // I kept this here because you can modify the contents from the subclasses
+    // with a method call to super
     private String tempItem;
     private String[] inventory;
     
@@ -26,13 +33,25 @@ public abstract class Character {
      * will be different depending on class player chooses
      * eg.  Mage - staff
      *      Warrior - sword
+     * also,
+     * when an enemy type is instantiated the weapon and skill sets
+     * will be different.
      */
     public abstract void setWeapon(String weapon);
     
     public abstract String getWeapon();
 
+    public abstract void setSkillPts(int skillPts);
+    
+    public abstract int getSkillPts();
+    
     /*
-     * Getters and Setters for Character
+     * Concrete Getters and Setters for Character
+     * ---------------------------------
+     * I'm not sure if I should make the getters and setters final.
+     * These will not change, so concrete inheritance will cut back on the 
+     * time it takes to code. I've never seen them declared final in 
+     * any sample code I've seen.
      */
     
     /**
@@ -89,20 +108,6 @@ public abstract class Character {
      */
     public void setIsMale(boolean isMale) {
         this.isMale = isMale;
-    }
-
-    /**
-     * @return the skillPts
-     */
-    public int getSkillPts() {
-        return skillPts;
-    }
-
-    /**
-     * @param skillPts the skillPts to set
-     */
-    public void setSkillPts(int skillPts) {
-        this.skillPts = skillPts;
     }
 
     /**
